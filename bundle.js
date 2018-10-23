@@ -7,7 +7,7 @@ const statusElement = document.querySelector('.bodyScrollLockStatus');
 
 disableBodyScrollButton.onclick = function() {
   console.info('disableBodyScrollButton');
-  bodyScrollLock.disableBodyScroll(document.querySelector('.scrollTarget'));
+  bodyScrollLock.disableBodyScroll(document.querySelector('.payrexx-modal-open>body'));
 
   statusElement.innerHTML = ' &mdash; Scroll Locked';
   statusElement.style.color = 'red';
@@ -15,7 +15,7 @@ disableBodyScrollButton.onclick = function() {
 
 enableBodyScrollButton.onclick = function() {
   console.info('enableBodyScrollButton');
-  bodyScrollLock.enableBodyScroll(document.querySelector('.scrollTarget'));
+  bodyScrollLock.enableBodyScroll(document.querySelector('.payrexx-modal-open>body'));
 
   statusElement.innerHTML = ' &mdash; Scroll Unlocked';
   statusElement.style.color = '';
