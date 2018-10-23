@@ -764,6 +764,27 @@
 
                 this.checkScrollbar()
                 this.$body.addClass('px-modal-open')
+                this.$body.addClass('disable-scrolling')
+
+                $(document).on('touchmove', function ( event ) {
+
+                    var isTouchMoveAllowed = true, target = that.$body[0];
+                    console.log('event target', target);
+
+                    while ( target !== null ) {
+                        if ( target.classList && target.classList.contains( 'disable-scrolling' ) ) {
+                            isTouchMoveAllowed = false;
+                            break;
+                        }
+                        target = target.parentNode;
+                    }
+
+                    if ( !isTouchMoveAllowed ) {
+                        event.preventDefault();
+                    }
+
+                });
+
 
                 this.setScrollbar()
                 this.escape()
