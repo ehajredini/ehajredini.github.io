@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed8e09fa-94f5-426b-9ba0-803687340255" name="Default Changelist" comment="body scroll block added" />
+    <list default="true" id="ed8e09fa-94f5-426b-9ba0-803687340255" name="Default Changelist" comment="body scroll on touchmove">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway.js" beforeDir="false" afterPath="$PROJECT_DIR$/gateway.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -22,25 +25,27 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="2" />
-          <entry key="js" value="3" />
+          <entry key="js" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="3" />
+          <entry key="JavaScript" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="50" />
-          <entry key="txt" value="25" />
+          <entry key="html" value="52" />
+          <entry key="js" value="257" />
+          <entry key="txt" value="92" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="50" />
-          <entry key="PLAIN_TEXT" value="25" />
+          <entry key="HTML" value="52" />
+          <entry key="JavaScript" value="257" />
+          <entry key="PLAIN_TEXT" value="92" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -49,11 +54,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1710">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="450">
+              <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -64,24 +69,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index_old.html">
+        <entry file="file://$PROJECT_DIR$/bundle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" selection-start-line="7" selection-end-line="8" />
+            <state relative-caret-position="162">
+              <caret line="9" column="87" lean-forward="true" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gateway.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            <state relative-caret-position="350">
+              <caret line="771" column="73" selection-start-line="771" selection-start-column="73" selection-end-line="771" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>scroll</find>
+      <find>$body</find>
+      <find>overflow</find>
+      <find>on</find>
+      <find>$(document).on</find>
+      <find>$body[0]</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -91,7 +106,9 @@
       <list>
         <option value="$PROJECT_DIR$/bodyScrollLock.js" />
         <option value="$PROJECT_DIR$/index_old.html" />
+        <option value="$PROJECT_DIR$/bundle.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/gateway.js" />
       </list>
     </option>
   </component>
@@ -100,11 +117,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="629" />
@@ -160,7 +172,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540201448293</updated>
-      <workItem from="1540201449544" duration="5786000" />
+      <workItem from="1540201449544" duration="14810000" />
     </task>
     <task id="LOCAL-00001" summary="body scroll block added">
       <created>1540212637550</created>
@@ -169,21 +181,36 @@
       <option name="project" value="LOCAL" />
       <updated>1540212637550</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="body scroll target class change">
+      <created>1540276734128</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540276734128</updated>
+    </task>
+    <task id="LOCAL-00003" summary="body scroll target class changed">
+      <created>1540276883063</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1540276883063</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5786000" />
+    <option name="totallyTimeSpent" value="14810000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="-5" width="1841" height="1086" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24958587" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2474001" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32938644" />
+      <window_info anchor="bottom" id="Version Control" weight="0.32834226" />
+      <window_info anchor="bottom" id="Terminal" weight="0.33046287" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -205,20 +232,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="body scroll block added" />
-    <option name="LAST_COMMIT_MESSAGE" value="body scroll block added" />
+    <MESSAGE value="body scroll target class change" />
+    <MESSAGE value="body scroll target class changed" />
+    <MESSAGE value="body scroll on touchmove" />
+    <option name="LAST_COMMIT_MESSAGE" value="body scroll on touchmove" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/bodyScrollLock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="898" selection-end-column="2242" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -229,15 +252,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="87" lean-forward="true" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        <state relative-caret-position="450">
+          <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#button#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#9870#9877#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="771" column="73" selection-start-line="771" selection-start-column="73" selection-end-line="771" selection-end-column="73" />
         </state>
       </provider>
     </entry>

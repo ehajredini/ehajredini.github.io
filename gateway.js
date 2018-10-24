@@ -768,7 +768,8 @@
 
                 $(document).on('touchmove', function ( event ) {
 
-                    var isTouchMoveAllowed = true, target = that.$body[0];
+                    // var isTouchMoveAllowed = true, target = that.$body[0];
+                    var isTouchMoveAllowed = true, target = event.target;
                     console.log('event target', target);
 
                     while ( target !== null ) {
