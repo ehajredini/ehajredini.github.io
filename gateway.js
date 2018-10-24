@@ -766,6 +766,8 @@
                 this.$body.addClass('px-modal-open')
                 this.$body.addClass('disable-scrolling')
 
+                this.setScrollbar()
+
                 $(document).on('touchmove', function ( event ) {
 
                     // var isTouchMoveAllowed = true, target = that.$body[0];
@@ -780,6 +782,8 @@
                         target = target.parentNode;
                     }
 
+                    console.log('isTouchMoveAllowed', isTouchMoveAllowed);
+
                     if ( !isTouchMoveAllowed ) {
                         event.preventDefault();
                     }
@@ -787,7 +791,6 @@
                 });
 
 
-                this.setScrollbar()
                 this.escape()
 
                 this.$element.on('click.dismiss.bs.modal.px', '[data-dismiss="px-modal"]', $.proxy(this.hide, this))
