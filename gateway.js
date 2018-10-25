@@ -543,6 +543,7 @@
             '}\n' +
             '#payrexx-modal .px-modal-open{\n' +
             '    overflow:hidden\n' +
+            '    -webkit-overflow-scrolling: auto;\n' +
             '}\n' +
             '#payrexx-modal.px-modal{\n' +
             '    display:none;\n' +
@@ -571,6 +572,7 @@
             '#payrexx-modal .px-modal-open .px-modal{\n' +
             '    overflow-x:hidden;\n' +
             '    overflow-y:auto\n' +
+            '    -webkit-overflow-scrolling: touch;\n' +
             '}\n' +
             '#payrexx-modal .px-modal-dialog{\n' +
             '    position:relative;\n' +
@@ -847,6 +849,7 @@
                 this.isShown = false
 
                 this.$body.removeClass('px-modal-open')
+                this.$body.removeClass('disable-scrolling')
 
                 this.resetScrollbar()
                 this.escape()
