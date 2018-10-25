@@ -769,18 +769,24 @@
                 this.setScrollbar()
 
                 $(document).on('touchmove', function ( event ) {
+                    console.log('body', that.$body[0]);
 
                     // var isTouchMoveAllowed = true, target = that.$body[0];
-                    var isTouchMoveAllowed = true, target = event.target;
+                    var isTouchMoveAllowed = true, target = that.$body[0];
                     console.log('event target', target);
 
-                    while ( target !== null ) {
-                        if ( target.classList && target.classList.contains( 'disable-scrolling' ) ) {
-                            isTouchMoveAllowed = false;
-                            break;
-                        }
-                        target = target.parentNode;
+                    if ( target.classList && target.classList.contains( 'disable-scrolling' ) ) {
+                        isTouchMoveAllowed = false;
+                        console.log('po hi edhe qetu');
                     }
+
+                    // while ( target !== null ) {
+                    //     if ( target.classList && target.classList.contains( 'disable-scrolling' ) ) {
+                    //         isTouchMoveAllowed = false;
+                    //         break;
+                    //     }
+                    //     target = target.parentNode;
+                    // }
 
                     console.log('isTouchMoveAllowed', isTouchMoveAllowed);
 
