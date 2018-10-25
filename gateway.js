@@ -768,7 +768,7 @@
 
                 this.setScrollbar()
 
-                $(document).on('touchmove', function ( event ) {
+                $(document).on('touchmove', function (event) {
                     console.log('body', that.$body[0]);
 
                     // var isTouchMoveAllowed = true, target = that.$body[0];
