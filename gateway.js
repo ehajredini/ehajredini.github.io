@@ -543,7 +543,6 @@
             '}\n' +
             '#payrexx-modal .px-modal-open{\n' +
             '    overflow:hidden\n' +
-            '    -webkit-overflow-scrolling: auto;\n' +
             '}\n' +
             '#payrexx-modal.px-modal{\n' +
             '    display:none;\n' +
@@ -554,7 +553,7 @@
             '    bottom:30px;\n' +
             '    left:0;\n' +
             '    z-index:9050;\n' +
-            '    -webkit-overflow-scrolling:auto;\n' +
+            '    -webkit-overflow-scrolling:touch;\n' +
             '    outline:0\n' +
             '}\n' +
             '#payrexx-modal.px-modal.fade .px-modal-dialog{\n' +
@@ -572,7 +571,6 @@
             '#payrexx-modal .px-modal-open .px-modal{\n' +
             '    overflow-x:hidden;\n' +
             '    overflow-y:auto\n' +
-            '    -webkit-overflow-scrolling: touch;\n' +
             '}\n' +
             '#payrexx-modal .px-modal-dialog{\n' +
             '    position:relative;\n' +
@@ -766,40 +764,8 @@
 
                 this.checkScrollbar()
                 this.$body.addClass('px-modal-open')
-                this.$body.addClass('disable-scrolling')
 
                 this.setScrollbar()
-
-                $(document).on('touchmove', function (event) {
-                    console.log('body', that.$body[0]);
-
-                    // var isTouchMoveAllowed = true, target = that.$body[0];
-                    var isTouchMoveAllowed = true, target = that.$body[0];
-                    console.log('event target', target);
-
-                    if (target.classList && target.classList.contains('disable-scrolling')) {
-                        isTouchMoveAllowed = false;
-                        console.log('po hi edhe qetu');
-                    }
-
-                    // while ( target !== null ) {
-                    //     if ( target.classList && target.classList.contains( 'disable-scrolling' ) ) {
-                    //         isTouchMoveAllowed = false;
-                    //         break;
-                    //     }
-                    //     target = target.parentNode;
-                    // }
-
-                    console.log('isTouchMoveAllowed', isTouchMoveAllowed);
-
-                    if ( !isTouchMoveAllowed ) {
-                        event.preventDefault();
-                    }
-
-                    event.stopPropagation();
-                });
-
-
                 this.escape()
 
                 this.$element.on('click.dismiss.bs.modal.px', '[data-dismiss="px-modal"]', $.proxy(this.hide, this))
@@ -849,7 +815,6 @@
                 this.isShown = false
 
                 this.$body.removeClass('px-modal-open')
-                this.$body.removeClass('disable-scrolling')
 
                 this.resetScrollbar()
                 this.escape()
