@@ -794,6 +794,7 @@
                         event.preventDefault();
                     }
 
+                    event.stopPropagation();
                 });
 
 
