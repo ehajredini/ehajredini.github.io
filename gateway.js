@@ -775,7 +775,7 @@
                     var isTouchMoveAllowed = true, target = that.$body[0];
                     console.log('event target', target);
 
-                    if ( target.classList && target.classList.contains( 'disable-scrolling' ) ) {
+                    if (target.classList && target.classList.contains('disable-scrolling')) {
                         isTouchMoveAllowed = false;
                         console.log('po hi edhe qetu');
                     }
