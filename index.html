@@ -35,6 +35,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <style>
 
+    .disable-scrolling {
+      position: relative;
+      overflow: hidden;
+    }
+
     .page{
       font-size: 24px;
       overflow: scroll;
@@ -124,13 +129,13 @@
         var isTouchMoveAllowed = true, target = document.body;
         console.log('target', target);
 
-        while ( target !== null ) {
+        // while ( target !== null ) {
             if ( target.classList && target.classList.contains( 'disable-scrolling' ) ) {
                 isTouchMoveAllowed = false;
-                break;
+                // break;
             }
-            target = target.parentNode;
-        }
+            // target = target.parentNode;
+        // }
 
         console.log('isTouchMoveAllowed', isTouchMoveAllowed);
 
