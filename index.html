@@ -1,169 +1,211 @@
-<!--<html>-->
-<!--<head>-->
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-  <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
-  <!--<script type="text/javascript" src="gateway.js"></script>-->
-<!--</head>-->
-<!--<body>-->
-<!--<a href="#" class="btn btn-lg btn-theme btn-donate btn-payrexx btn-payrexx-modal" data-href="https://demo.payrexx.com/de/?payment=26dbffb34f4dea8bc567e5fc647f0b9a">Open</a>-->
-<!--<script type="text/javascript">-->
-    <!--jQuery(".btn-payrexx-modal").payrexxModal({-->
-        <!--show: function() {-->
-            <!--console.log('modal show');-->
-        <!--},-->
-        <!--shown: function() {-->
-            <!--console.log('modal shown');-->
-        <!--},-->
-        <!--hide: function(transaction) {-->
-            <!--console.log('modal hide');-->
-            <!--console.log(transaction);-->
-        <!--},-->
-        <!--hidden: function(transaction) {-->
-            <!--console.log('modal hidden');-->
-            <!--console.log(transaction);-->
-        <!--}-->
-    <!--});-->
-<!--</script>-->
-<!--</body>-->
-<!--</html>-->
-
-<!doctype html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no, initial-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="gateway.js"></script>
 
-    .disable-scrolling {
-      position: relative;
+  <style>
+    .container {
+      height: 150vh;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.6);
       overflow: hidden;
     }
-
-    .page{
-      font-size: 24px;
-      overflow: scroll;
-    }
-
-    .menu{
+    .modal-scroll {
       position: fixed;
-      top: 0;
-      bottom: 0;
       left: 0;
-      width: 80%;
-      background: gray;
-      z-index: 1;
-      font-size: 10px;
-      overflow: scroll;
-      /* uncomment to get smooth momentum scroll, but also a rubber band effect */
-      /*-webkit-overflow-scrolling: touch;*/
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.2);
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
     }
-
-    .menu-item{
-      padding: 10px;
-      background: darkgray;
-      font-size: 24px;
+    .modal-content {
+      max-width: 400px;
+      height: 200vh;
+      background-color: #fff;
+      margin: 40px auto;
+      padding: 20px;
     }
-
   </style>
 </head>
+<body>
 
-<body class="disable-scrolling">
-
-<div class="menu scrollable">
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-  <div class="menu-item">hello world</div>
-</div>
-
-<div class="page">
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-  a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-  Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-  of Lorem Ipsum.
-
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-  a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-  Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-  of Lorem Ipsum.
-
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-  a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-  Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-  of Lorem Ipsum.
-
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-  a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-  Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-  of Lorem Ipsum.
-</div>
-
-<script>
-
-
-    document.ontouchmove = function ( event ) {
-
-        var isTouchMoveAllowed = true, target = document.body;
-        console.log('target', target);
-
-        // while ( target !== null ) {
-            if ( target.classList && target.classList.contains( 'disable-scrolling' ) ) {
-                isTouchMoveAllowed = false;
-                // break;
-            }
-            // target = target.parentNode;
-        // }
-
-        console.log('isTouchMoveAllowed', isTouchMoveAllowed);
-
-        if ( !isTouchMoveAllowed ) {
-            event.preventDefault();
-        }
-
-    };
-
-    function removeIOSRubberEffect( element ) {
-
-        element.addEventListener( "touchstart", function () {
-
-            var top = element.scrollTop, totalScroll = element.scrollHeight, currentScroll = top + element.offsetHeight;
-
-            if ( top === 0 ) {
-                element.scrollTop = 1;
-            } else if ( currentScroll === totalScroll ) {
-                element.scrollTop = top - 1;
-            }
-
-        } );
-
-    }
-
-    removeIOSRubberEffect( document.querySelector( ".scrollable" ) );
-
-</script>
-
+  <div class="container">
+    <h1>Scroll this container!</h1>
+    <a href="#" class="btn btn-lg btn-theme btn-donate btn-payrexx btn-payrexx-modal" data-href="https://demo.payrexx.com/de/?payment=26dbffb34f4dea8bc567e5fc647f0b9a">Open</a>
+  </div>
+  <script src="scroll-lock.js"></script>
+  <script type="text/javascript">
+      jQuery(".btn-payrexx-modal").payrexxModal({
+          show: function() {
+              console.log('modal show');
+              scrollLock.hide();
+          },
+          shown: function() {
+              console.log('modal shown');
+          },
+          hide: function(transaction) {
+              console.log('modal hide');
+              console.log(transaction);
+              scrollLock.show();
+          },
+          hidden: function(transaction) {
+              console.log('modal hidden');
+              console.log(transaction);
+          }
+      });
+  </script>
 </body>
 </html>
+
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+  <!--<meta charset="utf-8">-->
+  <!--<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no, initial-scale=1">-->
+  <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+  <!--<style>-->
+
+    <!--.disable-scrolling {-->
+      <!--position: relative;-->
+      <!--overflow: hidden;-->
+    <!--}-->
+    <!---->
+    <!--.page{-->
+      <!--font-size: 24px;-->
+      <!--overflow: scroll;-->
+    <!--}-->
+
+    <!--.menu{-->
+      <!--position: fixed;-->
+      <!--top: 0;-->
+      <!--bottom: 0;-->
+      <!--left: 0;-->
+      <!--width: 80%;-->
+      <!--background: gray;-->
+      <!--z-index: 1;-->
+      <!--font-size: 10px;-->
+      <!--overflow: scroll;-->
+      <!--/* uncomment to get smooth momentum scroll, but also a rubber band effect */-->
+      <!--/*-webkit-overflow-scrolling: touch;*/-->
+    <!--}-->
+
+    <!--.menu-item{-->
+      <!--padding: 10px;-->
+      <!--background: darkgray;-->
+      <!--font-size: 24px;-->
+    <!--}-->
+
+  <!--</style>-->
+<!--</head>-->
+
+<!--<body class="disable-scrolling">-->
+
+<!--<div class="menu scrollable">-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+  <!--<div class="menu-item">hello world</div>-->
+<!--</div>-->
+
+<!--<div class="page">-->
+  <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's-->
+  <!--standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make-->
+  <!--a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,-->
+  <!--remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing-->
+  <!--Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions-->
+  <!--of Lorem Ipsum.-->
+
+  <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's-->
+  <!--standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make-->
+  <!--a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,-->
+  <!--remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing-->
+  <!--Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions-->
+  <!--of Lorem Ipsum.-->
+
+  <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's-->
+  <!--standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make-->
+  <!--a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,-->
+  <!--remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing-->
+  <!--Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions-->
+  <!--of Lorem Ipsum.-->
+
+  <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's-->
+  <!--standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make-->
+  <!--a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,-->
+  <!--remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing-->
+  <!--Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions-->
+  <!--of Lorem Ipsum.-->
+<!--</div>-->
+
+<!--<script>-->
+
+
+    <!--document.ontouchmove = function ( event ) {-->
+
+        <!--var isTouchMoveAllowed = true, target = document.body;-->
+        <!--console.log('target', target);-->
+
+        <!--// while ( target !== null ) {-->
+            <!--if ( target.classList && target.classList.contains( 'disable-scrolling' ) ) {-->
+                <!--isTouchMoveAllowed = false;-->
+                <!--// break;-->
+            <!--}-->
+            <!--// target = target.parentNode;-->
+        <!--// }-->
+
+        <!--console.log('isTouchMoveAllowed', isTouchMoveAllowed);-->
+
+        <!--if ( !isTouchMoveAllowed ) {-->
+            <!--event.preventDefault();-->
+        <!--}-->
+
+    <!--};-->
+
+    <!--function removeIOSRubberEffect( element ) {-->
+
+        <!--element.addEventListener( "touchstart", function () {-->
+
+            <!--var top = element.scrollTop, totalScroll = element.scrollHeight, currentScroll = top + element.offsetHeight;-->
+
+            <!--if ( top === 0 ) {-->
+                <!--element.scrollTop = 1;-->
+            <!--} else if ( currentScroll === totalScroll ) {-->
+                <!--element.scrollTop = top - 1;-->
+            <!--}-->
+
+        <!--} );-->
+
+    <!--}-->
+
+    <!--removeIOSRubberEffect( document.querySelector( ".scrollable" ) );-->
+
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
