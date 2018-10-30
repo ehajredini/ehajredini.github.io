@@ -40,17 +40,17 @@
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <h1>Scroll this container!</h1>
     <a href="#" class="btn btn-lg btn-theme btn-donate btn-payrexx btn-payrexx-modal" data-href="https://demo.payrexx.com/de/?payment=26dbffb34f4dea8bc567e5fc647f0b9a">Open</a>
-  </div>
-  <script src="scroll-lock.js"></script>
+  <!--<div class="container">-->
+    <!--<h1>Scroll this container!</h1>-->
+    <!--<a href="#" class="btn btn-lg btn-theme btn-donate btn-payrexx btn-payrexx-modal" data-href="https://demo.payrexx.com/de/?payment=26dbffb34f4dea8bc567e5fc647f0b9a">Open</a>-->
+  <!--</div>-->
+  <!--<script src="scroll-lock.js"></script>-->
   <script type="text/javascript">
       jQuery(".btn-payrexx-modal").payrexxModal({
           show: function() {
               console.log('modal show');
-              scrollLock.hide();
+              // scrollLock.hide();
           },
           shown: function() {
               console.log('modal shown');
@@ -58,7 +58,7 @@
           hide: function(transaction) {
               console.log('modal hide');
               console.log(transaction);
-              scrollLock.show();
+              // scrollLock.show();
           },
           hidden: function(transaction) {
               console.log('modal hidden');
